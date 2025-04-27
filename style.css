@@ -1,0 +1,161 @@
+body{
+    margin: 0;
+    padding:0;
+    background-color: rgb(255, 226, 188);
+}
+h1 {
+    color:rgb(209, 134, 21);
+    text-align: center;
+}
+hr{
+    border: 5px solid black;
+}
+@font-face {
+    font-family: curvedFont;
+    src: url("FirstFont.otf");
+}
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 490%;
+    height: 100%;
+    background: url('imgs/background.png') repeat-x;
+    animation: moveBackground 15s linear infinite;
+    z-index: -1;
+    will-change: transform;
+  }
+  @keyframes moveBackground {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+span{
+    font-weight: bold;
+}
+#container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    height: auto;  
+    box-shadow: rgb(209, 134, 21) 10px 10px;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    box-sizing: border-box;
+    font-family: curvedFont;
+ 
+
+}
+#imgAndContact{
+    padding-left: 10px;
+}
+#contactinfo {
+    font-size: medium;
+    color: black;
+    list-style: none;
+    margin: 0;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    max-width: 100%;
+    padding-left:0;
+}
+#ProjectsAndTitle {
+    padding:0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  
+    justify-content: flex-start;  
+    width: 60%;  
+    min-width: 250px; 
+    box-sizing: border-box;
+}
+#ProjectsAndTitle h1 {
+    margin-top: 0;
+    text-align: left; 
+}
+#profileImg {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 5px solid #007bff;   
+}
+#projectBlock1{
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    text-align: left;
+    padding: 10px;
+    box-shadow: burlywood;
+    border-radius: 8px;
+    color:white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#download{
+    color:white;
+    background-color: rgb(63, 63, 255);
+    padding:5px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+}
+.button-info{
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+.infoBox{    
+    visibility: hidden;
+    width: 220px;
+    background-color: #ffbe8d;
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 110%;
+    transform: translateY(-50%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-shadow: #cc9971 10px 10px;
+}
+#game{
+    width:100%;
+    height: 100%;
+    border-radius: 5px;
+    border:solid 1px rgb(157, 157, 255);
+}
+
+.button-info:hover .infoBox {
+    visibility: visible;
+    opacity: 1;
+}
+@media (max-width: 600px) {
+    #container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #ProjectsAndTitle, #contactinfo {
+        padding-left: 0;
+        text-align: center;
+        width: 100%; 
+    }
+    #ProjectsAndTitle h1 {
+        text-align: center;
+    }
+    #profileImg {
+        margin-bottom: 20px;
+    }
+}
